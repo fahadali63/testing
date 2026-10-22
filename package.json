@@ -1,0 +1,25 @@
+{
+  "name": "whatsapp-study-bot",
+  "version": "1.0.0",
+  "description": "Reads WhatsApp class groups, extracts assignments/quizzes/exams, syncs them to Google Calendar and sends a daily digest.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --env-file=.env --disable-warning=ExperimentalWarning src/index.js",
+    "auth-google": "node --env-file=.env src/google-auth.js",
+    "test-extract": "node --env-file=.env --disable-warning=ExperimentalWarning src/test-extract.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.1.0",
+    "@google-cloud/local-auth": "^3.0.1",
+    "@whiskeysockets/baileys": "7.0.0-rc14",
+    "googleapis": "^187.0.0",
+    "node-cron": "^4.6.0",
+    "pino": "^10.4.0",
+    "qrcode-terminal": "^0.12.0",
+    "zod": "^4.6.7"
+  }
+}
